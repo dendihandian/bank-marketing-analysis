@@ -18,6 +18,9 @@ model_names = (
 decision_tree_classifier_tuned = pickle.load(open('serialization/models/decision_tree_classifier_tuned.pickle', 'rb'))
 logistic_regression_tuned = pickle.load(open('serialization/models/logistic_regression_tuned.pickle', 'rb'))
 
+###### Serialized Dataframes
+metrics_result = pickle.load(open('serialization/dataframes/metrics_result.pickle', 'rb'))
+
 def predict(parameters, modelname):
 
     job = parameters['job']

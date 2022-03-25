@@ -1,4 +1,4 @@
-from utilities.helper import categoricals_map, numericals_minmax, model_names, predict
+from utilities.helper import categoricals_map, numericals_minmax, model_names, predict, metrics_result
 import streamlit as st
 
 ###### Variables
@@ -57,4 +57,8 @@ with st.container():
     if response != None:
         st.metric('Response', response, delta=None, delta_color="normal")
 
-    # st.json(numericals_minmax)
+st.write("""__________""")
+
+with st.container():
+    st.header('Model Evaluation')
+    st.dataframe(metrics_result)
